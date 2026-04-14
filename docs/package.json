@@ -1,0 +1,17 @@
+{
+  "name": "qsos-docs",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "dev": "nuxt dev --extends docus",
+    "build": "nuxt build --extends docus"
+  },
+  "dependencies": {
+    "@nuxt/hints": "1.0.0-alpha.3",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "4.2.1",
+    "better-sqlite3": "^12.2.0",
+    "docus": "latest",
+    "nuxt": "^4.1.2",
+    "typescript": "^6.0.2"
+  }
+}

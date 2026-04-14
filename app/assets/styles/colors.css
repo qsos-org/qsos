@@ -1,0 +1,45 @@
+/* Brand colors */
+:root {
+  --white: #ffffff;
+  --black: #3c3c3c;
+  --brand: #4580d7;
+  --brand-define: #ca1b1b;
+  --brand-evaluate: #ed8139;
+  --brand-qualify: #60c923;
+  --brand-select: #4580d7;
+
+  --background-color: #ffffff;
+  --background-color-alt: #f5f6f8;
+  --background-color-button: #f0f0f0;
+  --background-color-contrast: #202020;
+  --background-color-contrast-alt: #333333;
+  --background-color-brand: #277777;
+
+  --foreground-color: #1b1c1e;
+  --foreground-color-alt: #666666;
+  --foreground-color-contrast: #ffffff;
+  --foreground-color-contrast-alt: #bfbfbf;
+  --foreground-color-link: #277777;
+  --foreground-color-link-hover: #1d5f5f;
+
+  --border-color: #999999;
+  --border-color-alt: #333333;
+  --border-color-contrast: #bfbfbf;
+  --border-color-light: #cccccc;
+
+  --shadow: rgba(0, 0, 0, 0.5);
+
+  --success-color: #00b241;
+  --info-color: #1b6aa4;
+  --warning-color: #ffb223;
+  --danger-color: #b2393f;
+  --error: var(--danger-color);
+
+  --accent-color: #45beaa;
+  --accent-color-contrast: #7ccaf9;
+}
+
+.bg-danger {
+  background-color: var(--danger-color);
+  color: var(--foreground-color-contrast);
+}

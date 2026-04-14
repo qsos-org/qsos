@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import "colors.css";
+@import "forms.css";
+@import "tables.css";
+@import "headings.css";
+@import "cards.css";
+@import "dialogs.css";
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 16px;
+  font-style: normal;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+a {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+nav {
+  margin: 0.5em;
+  display: inline-block;
+}
+
+button,
+.link {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.iconify {
+  vertical-align: middle;
+}

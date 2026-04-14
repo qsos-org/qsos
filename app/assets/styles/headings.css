@@ -1,0 +1,32 @@
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.ribbon-define,
+.ribbon-evaluate,
+.ribbon-qualify,
+.ribbon-select {
+  padding-left: 16px;
+  border-left: 8px solid transparent;
+}
+
+.ribbon-define {
+  border-color: var(--brand-define);
+}
+.ribbon-evaluate {
+  border-color: var(--brand-evaluate);
+}
+.ribbon-qualify {
+  border-color: var(--brand-qualify);
+}
+.ribbon-select {
+  border-color: var(--brand-select);
+}

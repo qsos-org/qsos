@@ -1,0 +1,194 @@
+form label {
+  display: block;
+  margin-bottom: 0;
+}
+
+form label:has(+ input)::after {
+  content: ": ";
+  display: inline;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+input[type="file" i]::-webkit-file-upload-button {
+  font-family: inherit;
+}
+
+textarea {
+  width: 100%;
+  min-height: 4em;
+  field-sizing: content;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  margin: 0 0 0.5em 0;
+}
+
+select {
+  padding: 0.5em;
+}
+
+button,
+.button {
+  margin: 0.5em 0;
+  padding: 0.25em 0.5em;
+  border-radius: 0.4em;
+  border-width: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--background-color-button);
+  border: 1px solid var(--border-color);
+}
+
+a.button:not([target="_blank"]):not([href^="mailto:"]):not([href^="tel:"]) {
+  text-decoration: none;
+  color: var(--foreground-color);
+}
+
+a.button {
+  text-decoration: none;
+}
+
+a.button:visited {
+  color: var(--foreground-color);
+}
+
+.button:hover,
+button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button.danger,
+.button.danger {
+  background-color: var(--danger-color);
+  color: var(--white);  
+}
+
+.button-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  background-color: #5a6268;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+button[type="submit"] {
+  font-weight: 600;
+}
+
+.inline-label {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 0.5em;
+  align-items: baseline;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 0.5em;
+  align-items: baseline;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.input-group {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.input-group > input,
+.input-group > button {
+  margin: 0;
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.input-group :first-child {
+  border-radius: 0.4em 0 0 0.4em;
+}
+
+.input-group :last-child {
+  border-radius: 0 0.4em 0.4em 0;
+}
+
+.info-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  border-radius: 0.25em;
+  color: #1565c0;
+  font-size: 0.9em;
+}
+
+.info-message svg {
+  flex-shrink: 0;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.legacy-info {
+  font-size: 0.85em;
+  color: #1565c0;
+  font-style: italic;
+  margin: -0.5em 0 1em 0;
+  display: block;
+  clear: both;
+}
+
+.legacy-info .icon {
+  font-size: 1em;
+  margin-right: 0.3em;
+}
+

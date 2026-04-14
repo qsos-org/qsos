@@ -1,0 +1,29 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--background-color-alt);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-light);
+}
+
+.card.link,
+.card.action {
+  border: 1px solid var(--border-color);
+}
+
+.card.action {
+  text-align: center;
+  place-content: center;
+  font-weight: bold;
+  min-height: 100px;
+}
+
+.card.link:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
