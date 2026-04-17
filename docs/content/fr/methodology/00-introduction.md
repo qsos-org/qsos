@@ -3,29 +3,19 @@ title: 'Introduction'
 description: 'Introduction à la méthodologie QSOS'
 ---
 
-# QSOS : Une Approche Structurée pour la Sélection de Logiciels Open Source
-
-## Le Défi Organisationnel
-
-Les organisations font face à un enjeu critique lors de la sélection de logiciels open source : Comment prendre une décision objective et défendable dans un environnement où la simple parité fonctionnelle est insuffisante ?
-
-L'approche classique—évaluer basée sur la popularité, la taille de la communauté, ou les fonctionnalités techniques—ignore souvent des facteurs critiques qui déterminent la viabilité à long terme :
-
-- **Risque de Continuité** : Le projet va-t-il continuer ? Que se passe-t-il si le mainteneur principal part ?
-- **Qualité et Maintenance du Code** : Le code est-il activement maintenu ? Avec quelle rapidité les failles de sécurité sont-elles corrigées ?
-- **Gouvernance et Support** : Qui prend les décisions ? Quel est le modèle de support ?
-- **Production-Ready** : Dispose-t-il des outils, documentation et infrastructure de test nécessaires pour un usage en production ?
-
-La sélection de logiciels open source n'est pas une simple décision technique—c'est une décision organisationnelle. Les mauvais choix créent de la dette technique, des vulnérabilités de sécurité, et des cycles de refactorisation coûteux.
+# QSOS : Qualification et Sélection de logiciels Open Source
 
 ## Pourquoi QSOS ?
 
-QSOS (Qualification and Selection of Open Source software) fournit une méthode systématique et basée sur des preuves pour évaluer et comparer des projets open source. Plutôt que de s'appuyer sur l'intuition ou des informations incomplètes, QSOS garantit que les décisions sont :
+Sélectionner un logiciel open source, c'est compliqué. Il faut évaluer la qualité du code, la viabilité du projet, la gouvernance, la sécurité... Et vous devez justifier votre choix auprès de vos équipes et de la direction.
 
-- **Objectives** : Critères structurés, notation quantifiée, justifications documentées
-- **Traçables** : Chaque score lié à des preuves et aux décideurs
-- **Défendables** : Les résultats résistent à l'examen des parties prenantes et aux audits
-- **Reproductibles** : La méthodologie cohérente produit des résultats cohérents
+QSOS fournit une méthode simple et transparente pour évaluer et comparer des projets open source. Au lieu de choisir basé sur la popularité ou l'intuition, vous évaluez sur des critères objectifs, documentez vos scores avec des preuves, et générez des rapports clairs.
+
+## À qui s'adresse QSOS ?
+
+- les personnes curieuses de se documenter sur la méthode à titre professionnel comme personnel ;
+- les communautés des projets Open Source ;
+- les experts du secteur informatique désirant connaître et appliquer la méthode dans leur travail quotidien d'évaluation et de sélection de composants dans l'optique de bâtir des solutions logicielles répondant à leurs besoins ou à ceux de leurs clients.
 
 ## Comment Fonctionne QSOS
 

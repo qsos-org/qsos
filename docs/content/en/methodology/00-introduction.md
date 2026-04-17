@@ -3,45 +3,35 @@ title: 'Introduction'
 description: 'Introduction to the QSOS methodology'
 ---
 
-# QSOS: A Structured Approach to Open Source Selection
-
-## The Business Problem
-
-Organizations face a critical challenge when selecting open source software: How do you make an objective, defensible decision in an environment where feature parity alone is insufficient?
-
-The typical approach—evaluating based on popularity, community size, or technical features—often ignores critical factors that determine long-term viability:
-
-- **Continuity Risk**: Will the project continue? What happens if the lead maintainer leaves?
-- **Code Quality and Maintenance**: Is the codebase actively maintained? How quickly are security issues addressed?
-- **Governance and Support**: Who makes decisions? What is the support model?
-- **Production Readiness**: Does it have the tooling, documentation, and testing infrastructure for enterprise use?
-
-Choosing open source software is not a purely technical decision—it is an organizational one. Bad choices lead to technical debt, security vulnerabilities, and costly refactoring cycles.
+# QSOS: Qualification and Selection of Open Source software
 
 ## Why QSOS?
 
-QSOS (Qualification and Selection of Open Source software) provides a systematic, evidence-based method to evaluate and compare open source projects. Rather than relying on intuition or incomplete information, QSOS ensures decisions are:
+Selecting open source software is hard. You need to evaluate code quality, project viability, governance, security... And you need to justify your choice to your team and leadership.
 
-- **Objective**: Structured criteria, quantified scoring, documented justification
-- **Traceable**: Every score linked to evidence and decision makers
-- **Defensible**: Results stand up to stakeholder scrutiny and audit requirements
-- **Repeatable**: Consistent methodology produces consistent outcomes
+QSOS provides a simple, transparent method to evaluate and compare open source projects. Instead of choosing based on popularity or gut feeling, you evaluate against objective criteria, document your scores with evidence, and generate clear reports.
+
+## Who Is QSOS For?
+
+- Individuals curious to learn about the methodology for professional and personal purposes;
+- Open Source project communities;
+- IT experts who wish to understand and apply the methodology in their daily work of evaluating and selecting components with a view to building software solutions that meet their needs or those of their clients.
 
 ## How QSOS Works
 
-QSOS operates through four distinct phases, each building on the previous:
+QSOS works in four simple phases:
 
 ### Phase 1: Define
-Establish the scope and context for your evaluation. Identify software types, list candidate software with specific versions, and define evaluation parameters.
+List the software categories and candidates you want to evaluate.
 
 ### Phase 2: Evaluate
-Score each candidate against a structured evaluation grid. Each criterion receives a score (0 = insufficient, 2 = comprehensive) with documented justification and evidence.
+Score each software against a structured grid. Each criterion gets a score (0 = insufficient, 2 = comprehensive) with justification and evidence.
 
 ### Phase 3: Qualify
-Apply weighting based on organizational context. Different organizations prioritize differently—a startup values rapid iteration and active maintenance, while an enterprise emphasizes stability and governance.
+Weight the criteria based on your context. A startup values active maintenance, an enterprise values stability.
 
 ### Phase 4: Select
-Compare results and make the selection decision. Visualize differences, validate conclusions, and generate documented reports for stakeholder approval.
+Compare results, visualize differences, and make your decision with full traceability.
 
 ---
 
