@@ -80,7 +80,7 @@ export async function exportPDF({
     doc.text(`Issued on ${dateStr}`, pageWidth - margin, baselineY, { align: "right" });
 
     
-    const theadThs = Array.from(table.querySelectorAll("thead th"));
+    const theadThs = Array.from(table.querySelectorAll("thead tr:first-child th"));
     const softwareNames = theadThs.slice(2).map(th => (th.textContent || "").split("Version:")[0]?.trim());
     const gridVersion = title.match(/\(([^)]+)\)/)?.[1] || "";
     const softwareList = softwareNames.length > 5

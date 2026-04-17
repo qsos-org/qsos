@@ -3,7 +3,7 @@
     <td @click="opened = !opened">
       <span class="path">{{ path.length >= 4 ? `${'&nbsp;'.repeat(path.length - 3)}└` : '' }}
         {{ opened ? '📂' : '📁' }}</span>
-      {{ section.name }}
+      {{ $t(section.name, section.name) }}
     </td>
     <td>
       <span v-if="print" class="print-weight">{{ asWeight(getValueAtPath(weights, [...path, 'weight']), 100) }}%</span>
@@ -19,7 +19,8 @@
     <template v-for="(subsection, index) in section.sections" :key="subsection.name">
       <template v-if="isCriteria(subsection)">
         <tr class="criteria">
-          <td><span class="path">{{ '&nbsp;'.repeat(path.length + 2) + '└&nbsp;&nbsp;' }}</span>{{ subsection.name }}
+          <td><span class="path">{{ '&nbsp;'.repeat(path.length + 2) + '└&nbsp;&nbsp;' }}</span>{{ $t(subsection.name,
+            subsection.name) }}
           </td>
           <td>
             <span v-if="print" class="print-weight">{{ asWeight(getValueAtPath(weights, [...path, 'sections',

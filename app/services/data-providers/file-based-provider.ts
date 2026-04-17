@@ -50,11 +50,13 @@ export class FileBasedProvider implements DataProvider {
 
     private isMaturityGrid(sections?: any[]): boolean {
         return !sections?.some(s =>
-            s.ref !== "maturity" &&
-            s.name !== "generic" &&
-            s.name !== "Section générique" &&
-            s.name !== "maturité" &&
-            s.name !== "Maturité"
+            s.ref === "maturity" ||
+            s.ref === "qsos_maturity_2_0.maturity" ||
+            s.name === "Maturity" ||
+            s.name === "maturité" ||
+            s.name === "Maturité" ||
+            s.name === "generic" ||
+            s.name === "Section générique"
         );
     }
 
@@ -384,8 +386,6 @@ export class FileBasedProvider implements DataProvider {
                     const qsosVersion = QSOS_VERSIONS[grid.qsosVersion]
                     if (qsosVersion?.maturitySection) {
                         grid.sections.unshift(qsosVersion.maturitySection)
-                    } else {
-                        log.error(`QSOS version ${grid.qsosVersion} not found or invalid for evaluation grid v${grid.gridVersion} for ${type}.`)
                     }
                 }
                 return grid
@@ -400,12 +400,11 @@ export class FileBasedProvider implements DataProvider {
             this.getEvaluationGridFile(type, gridVersion),
             this.getSoftwareTypeFile(type)
         ]).then(([data, softwareType]) => {
+            // Inject maturity section if not already present
             if (this.isMaturityGrid(data.sections)) {
                 const qsosVersion = QSOS_VERSIONS[data.qsosVersion]
                 if (qsosVersion?.maturitySection) {
                     data.sections.unshift(qsosVersion.maturitySection)
-                } else {
-                    throw new Error(`QSOS version ${data.qsosVersion} not found or invalid for evaluation grid v${gridVersion} for ${type}.`)
                 }
             }
             return { ...data, softwareType } as EvaluationGrid
