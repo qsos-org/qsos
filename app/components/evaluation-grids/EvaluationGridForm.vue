@@ -387,7 +387,7 @@ const isSubsection = (section: { [key: string]: any }): section is EvaluationSec
 };
 
 const isReadonly = (path: Path) => {
-  return path[0]?.toString() == "0" && grid.value?.sections?.[0]?.name === "qsos_maturity_2_0.maturity"
+  return path[0]?.toString() == "0" && grid.value?.sections?.[0]?.ref === "qsos_maturity_2_0.maturity"
 };
 
 const addCriteria = (section: EvaluationSection, path: Path) => {
