@@ -1,36 +1,40 @@
 ---
 title: 'Phase 3 : Qualifier'
-description: 'Pondération des critères et préréglages'
+description: "Pondérer les critères selon vos priorités"
 ---
 
 ## Objectif
 
-Une fois les logiciels évalués (Phase 2), vous devez les comparer. Phase 3 ajoute le **contexte organisationnel** : "Quels critères comptent POUR NOUS?"
+Cette phase consiste à pondérer les critères selon vos priorités. Vous définissez l'importance de chaque élément de la grille via des préréglages d'exigences, qui seront appliqués lors de la comparaison.
 
-Cela se fait via les **préréglages d'exigences** : ensembles de poids qui codifient vos priorités.
+Dans cette phase, vous créez des **préréglages d'exigences** : ensembles de pondérations pour les sections, sous-sections et critères de la grille.
 
-## Concept Clé
+## Préréglages d'exigences
 
-Les préréglages mappent chaque critère à un **poids numérique** qui détermine son influence dans la comparaison finale :
+Un préréglage d'exigences attribue un poids à chaque élément de la grille d'évaluation. Ce poids détermine l'influence de l'élément dans le score final.
 
-**Formule**: `Score Final = (∑ score × poids) / (∑ poids)`
+Vous pouvez créer plusieurs préréglages selon vos contextes d'utilisation.
+
+## Pondération
+
+Chaque élément de la grille est associé à un poids numérique : sections, sous-sections et critères. Plus le poids est élevé, plus l'élément influence le score final.
+
+Par défaut, tous les éléments ont un poids de 100, ce qui revient à une moyenne simple.
+
+**Formule** : `Score Final = (∑ score × poids) / (∑ poids)`
 
 Exemple :
-```
-Héritage:         2 × 200  = 400
-Activité:         2 × 250  = 500
-Gouvernance:      1 × 150  = 150
-Industrialisation: 2 × 100 = 200
-───────────────────────────────
-Score = (400+500+150+200) / (200+250+150+100) = 1250/700 = 1.79
-```
 
-Un poids de 250 vs 100 signifie que ce critère est **2.5x plus influent** dans le score final.
+| Critère | Score | Poids | Score × Poids |
+|---------|-------|-------|---------------|
+| Héritage | 2 | 200 | 400 |
+| Activité | 2 | 250 | 500 |
+| Gouvernance | 1 | 150 | 150 |
+| Industrialisation | 2 | 100 | 200 |
+| **Total** | | **700** | **1250** |
 
----
+Score Final = 1250 / 700 = **1.79**
 
-## Prochaine Étape
+## Prochaine étape
 
-Une fois les préréglages créés → **[Phase 4 : Sélectionner](/fr/methodology/04-select)**
-
-Vous appliquez les poids aux évaluations pour générer des comparaisons classées.
+Une fois vos préréglages créés, passez à la **[Phase 4 : Sélectionner](/fr/methodology/04-select)** pour appliquer les pondérations et comparer les logiciels.

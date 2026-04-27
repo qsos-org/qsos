@@ -1,40 +1,42 @@
 ---
 title: 'Phase 1: Define'
-description: 'Establish the evaluation framework'
+description: "Establish the evaluation framework"
 ---
 
 ## Purpose
 
-The purpose of this phase is to establish the foundational reference framework that will serve as the basis for subsequent phases. You organize software into categories relevant to your context and document the versions you wish to compare.
+To evaluate effectively, you must first know what to evaluate. This phase lays the foundation for the process: you organize your software by categories, assign licenses, and define the versions you wish to compare.
 
-This framework ensures **consistency**: once established, all software in the same category will be evaluated with the same criteria, making results directly comparable.
+This framework ensures **consistency**: all software in the same category will be evaluated using the same criteria.
 
-## What Gets Defined
+In this phase, you define:
 
-### Software Types
+- **Software types**: classification of software by functional domain
+- **Software**: the software to evaluate, with their licenses and versions
 
-A **software type** is a functional category you create to group interchangeable software. Each type represents a specific domain:
+## Software Types
 
-- **BI** (Business Intelligence): dashboards, visualization, reporting tools
-- **Web Frameworks**: frontend/backend web development frameworks
-- **ETL**: data integration and transformation tools
-- **Databases**: relational/non-relational data storage
+A software type corresponds to a functional domain. It groups software that addresses the same need.
+
+Examples:
+
+- **BI** (Business Intelligence): dashboards, visualization, reporting
+- **Web Frameworks**: frontend and backend development
+- **ETL**: data integration and transformation
+- **Databases**: relational or NoSQL storage
 - **CMS**: content management and collaboration
 
-These types constitute the **common vocabulary** of your organization. Instead of debating "Vue.js vs React vs Angular", you say "We evaluate Web Frameworks according to our defined criteria".
+## Software
 
-### Software and Versions
+Within each type, you add the relevant software.
 
-You document the **candidate software** in each type:
+Example: In the "Web Frameworks" type, you can add Vue.js, React, Angular.
 
-- Select the software (ex. Vue.js, React, Angular)
-- Associate a **license**: MIT, GPL-3.0, Apache-2.0, etc.
-- Document the **versions** to evaluate: 3.4.0, 3.3.4, etc.
+Each software is associated with:
 
-Each version will be evaluated separately, allowing you to track how software evolves over time.
+- **One or more licenses**: from the SPDX database, the international standard that references free and open source licenses. Licenses can be combined with the `AND`, `OR`, `WITH` operators.
+- **One or more versions**: the versions you wish to evaluate. Each version is evaluated separately, allowing you to track software evolution over time.
 
-## Next Phase
+## Next Step
 
-Once your software types are created and candidates documented → **[Phase 2: Evaluate](/en/methodology/02-evaluate)**
-
-In Phase 2, you'll define the **evaluation criteria** specific to each type and begin scoring the software.
+Once your types and software are defined, move to **[Phase 2: Evaluate](/en/methodology/02-evaluate)** to define criteria and begin scoring.

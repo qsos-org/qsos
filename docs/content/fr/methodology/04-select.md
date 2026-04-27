@@ -1,23 +1,35 @@
 ---
 title: 'Phase 4 : Sélectionner'
-description: 'Comparer les évaluations en utilisant les poids'
+description: "Sélectionner et comparer les logiciels"
 ---
 
 ## Objectif
 
-Interface de comparaison interactive où vous appliquez les poids (Phase 3) aux évaluations (Phase 2) pour générer un **classement de logiciels** justifié et auditable.
+Cette phase consiste à sélectionner les logiciels à comparer, puis à appliquer vos préréglages d'exigences pour obtenir un classement basé sur vos priorités.
 
-## Concept Clé
+Dans cette phase, vous :
 
-1. **Tableau comparatif** → Critères, poids et scores pour chaque logiciel
-2. **Charger un préréglage** → Les poids sauvegardés s'appliquent automatiquement
-3. **Ajuster les poids** → Les scores se recalculent en temps réel
-4. **Visualiser** → Graphiques (radar, bulles) montrant le positionnement et le classement des logiciels
-5. **Enregistrer** → Sauvegarder les poids ajustés comme nouveau préréglage ou mettre à jour existant
-6. **Exporter** → Générer un PDF complet avec tous les résultats
+- **Sélectionnez les logiciels** : choix des logiciels à comparer
+- **Comparez les logiciels** : tableau comparatif avec scores et poids
+- **Visualisez les résultats** : graphiques radar et bulles
+- **Ajustez les poids** : recalcul en temps réel
 
----
+## Tableau comparatif
 
-## Prochaine Étape
+Le tableau comparatif affiche les logiciels côte à côte :
 
-Sélection finalisée → Justification documentée et auditable.
+- Critères organisés par sections et sous-sections
+- Scores de chaque logiciel
+- Poids appliqués à chaque élément (sections, sous-sections et critères)
+- Score final calculé automatiquement
+
+Vous pouvez charger un préréglage existant ou ajuster les poids directement. Les scores se recalculent en temps réel.
+
+## Visualisation
+
+Deux types de graphiques sont disponibles :
+
+- **Radar** : vue d'ensemble des scores par critère
+- **Bulles** : positionnement des logiciels selon deux axes de votre choix
+
+À la fin de cette phase, vous obtenez un classement de logiciels basé sur vos préréglages d'exigences. Vous pouvez exporter la comparaison en PDF : tableau et graphiques inclus.

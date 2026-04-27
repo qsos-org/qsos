@@ -5,36 +5,38 @@ description: "Établir le cadre d'évaluation"
 
 ## Objectif
 
-L'objectif de cette phase est d'établir le cadre de référence fondamental qui servira de base aux phases suivantes. Vous organisez les logiciels en catégories pertinentes pour votre contexte et documentez les versions que vous souhaitez comparer.
+Pour évaluer efficacement, il faut d'abord savoir quoi évaluer. Cette phase pose les fondations du processus : vous organisez vos logiciels par catégories, leur associez une licence et définissez les versions concernées.
 
-Ce cadre assure la **cohérence** : une fois établi, tous les logiciels d'une même catégorie seront évalués avec les mêmes critères, rendant les résultats directement comparables.
+Ce cadre assure la cohérence : tous les logiciels d'une même catégorie seront évalués selon les mêmes critères.
 
-## Ce Qui Est Défini
+Dans cette phase, vous définissez :
 
-### Types de Logiciels
+- **Types de logiciels** : classification des logiciels par domaine fonctionnel
+- **Logiciels** : les logiciels à évaluer, avec leurs licences et versions
 
-Un **type de logiciel** est une catégorie fonctionnelle que vous créez pour grouper les logiciels substituables. Chaque type représente un domaine spécifique :
+## Types de logiciels
 
-- **BI** (Business Intelligence) : outils de dashboards, visualisation, reporting
-- **Frameworks Web** : frameworks de développement web frontend/backend
-- **ETL** : outils d'intégration et transformation de données
-- **Bases de données** : stockage de données relationnel/non-relationnel
+Un type de logiciel correspond à un domaine fonctionnel. Il regroupe des logiciels qui répondent à un même besoin.
+
+Exemples :
+
+- **BI** (Business Intelligence) : dashboards, visualisation, reporting
+- **Frameworks Web** : développement frontend et backend
+- **ETL** : intégration et transformation de données
+- **Bases de données** : stockage relationnel ou NoSQL
 - **CMS** : gestion de contenu et collaboration
 
-Ces types constituent le **vocabulaire commun** de votre organisation. Au lieu de débattre "Vue.js vs React vs Angular", vous dites "Nous évaluons les Web Frameworks selon nos critères définis".
+## Logiciels
 
-### Logiciels et Versions
+Au sein de chaque type, vous ajoutez les logiciels concernés.
 
-Vous documentez les **logiciels candidats** dans chaque type :
+Exemple : dans le type "Frameworks Web", vous pouvez ajouter Vue.js, React, Angular.
 
-- Sélectionnez le logiciel (ex. Vue.js, React, Angular)
-- Associez une **licence** : MIT, GPL-3.0, Apache-2.0, etc.
-- Documentez les **versions** à évaluer : 3.4.0, 3.3.4, etc.
+Chaque logiciel est associé à :
 
-Chaque version sera évaluée séparément, vous permettant de suivre comment un logiciel évolue au fil du temps.
+- **Une ou plusieurs licences** : provenant de la base SPDX, le standard international qui référence les licences libres et open source. Les licences peuvent être combinées avec les opérateurs `AND`, `OR`, `WITH`.
+- **Une ou plusieurs versions** : les versions que vous souhaitez évaluer. Chaque version est évaluée séparément, ce qui permet de suivre l'évolution du logiciel dans le temps.
 
-## Prochaine Étape
+## Prochaine étape
 
-Une fois vos types de logiciels créés et vos candidats documentés → **[Phase 2 : Évaluer](/fr/methodology/02-evaluate)**
-
-En Phase 2, vous définirez les **critères d'évaluation** spécifiques à chaque type et commencerez à noter les logiciels.
+Une fois vos types et logiciels définis, passez à la **[Phase 2 : Évaluer](/fr/methodology/02-evaluate)** pour définir les critères et commencer à noter.

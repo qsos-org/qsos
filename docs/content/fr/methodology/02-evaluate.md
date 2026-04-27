@@ -1,38 +1,57 @@
 ---
 title: 'Phase 2 : Évaluer'
-description: 'Noter les logiciels objectivement'
+description: "Créer les grilles et noter les logiciels"
 ---
 
 ## Objectif
 
-L'objectif de cette phase est d'évaluer les logiciels libres et open source objectivement. Utilisant le cadre de référence défini en Phase 1, vous rassemblez les informations sur chaque candidat logiciel et le notez selon des critères cohérents et documentés.
+Cette phase consiste à créer les grilles d'évaluation et à noter les logiciels. Chaque type de logiciel est associé à une grille qui définit les critères sur lesquels les logiciels seront évalués.
 
-Le résultat est une **fiche d'évaluation** pour chaque version de logiciel : un enregistrement complet des scores, justifications, et preuves qui forme la base de la comparaison.
+Dans cette phase, vous :
 
-## Concept Clé
+- **Créez la grille d'évaluation** : le template de critères pour un type de logiciel
+- **Évaluez les logiciels** : notation de chaque version selon les critères de la grille
 
-Les évaluations utilisent des **modèles de référence** (grilles) qui décrivent :
+## Grille d'évaluation
 
-- **4 Dimensions de Maturité QSOS 2.0** : Héritage, Activité, Gouvernance, Industrialisation
-- **Critères de couverture fonctionnelle** : Spécifiques à votre type de logiciel
-- **Notation 0-1-2** : Chaque critère reçoit une note discrète
+Chaque type de logiciel peut avoir une ou plusieurs grilles d'évaluation. Chaque grille définit les critères sur lesquels les logiciels seront évalués.
+
+Les grilles sont versionnées et immuables : pour modifier une grille, vous créez une nouvelle version.
+
+Une grille contient :
+
+- **Une section Maturité** : présente par défaut et obligatoire
+- **Des sections personnalisées** : vous pouvez ajouter des sections et sous-sections selon vos besoins
+
+## Section Maturité
+
+La maturité d'un logiciel est évaluée selon 4 axes :
+
+- **Legacy (Héritage)** : Age, History, Core Team, Popularity
+- **Activity (Activité)** : Contributing Community, Activity on Bugs, Activity on Functionalities, Activity on Releases
+- **Governance (Gouvernance)** : Copyright Holders, Roadmap, Project Management, Distribution Mode
+- **Industrialization (Industrialisation)** : Services, Documentation, Tests
+
+## Sections personnalisées
+
+En plus de la maturité, vous pouvez ajouter des sections spécifiques au type de logiciel évalué.
+
+Exemple : pour un type "Frameworks Web", vous pouvez ajouter des sections comme Performance, Sécurité, Maintenabilité.
+
+## Évaluation
+
+Une fois la grille créée, vous pouvez évaluer les logiciels de ce type.
+
+Chaque critère est noté de 0 à 2 :
 
 | Score | Signification |
-|-------|--------------|
-| **0** | Absent / Non conforme / Problématique |
-| **1** | Partiellement présent / Acceptable |
-| **2** | Complet / Robuste / Qualité |
+|-------|---------------|
+| **0** | Absent ou non conforme |
+| **1** | Partiellement présent |
+| **2** | Complet et robuste |
 
-**Règle** : Chaque score **doit être justifié** avec un texte obligatoire.
+Chaque score doit être accompagné d'une justification fortement recommandée.
 
-Chaque logiciel est évalué **contre les critères de la grille**, et cet enregistrement complet forme le **dossier d'évaluation** : scores, justifications, traçabilité (auteurs, dates).
+## Prochaine étape
 
----
-
-## Prochaine Étape
-
-Une fois les logiciels évalués → **[Phase 3 : Qualifier](/fr/methodology/03-qualify)**
-
-Vous définirez la pondération basée sur vos priorités organisationnelles et contexte.
-
-
+Une fois les logiciels évalués, passez à la **[Phase 3 : Qualifier](/fr/methodology/03-qualify)** pour définir la pondération selon vos priorités.

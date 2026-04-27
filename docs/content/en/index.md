@@ -71,7 +71,7 @@ Key Features
   ---
   #title
   Software Comparison
-  
+
   #description
   Compare different software options effectively.
   :::
@@ -83,7 +83,7 @@ Key Features
   ---
   #title
   API Reference
-  
+
   #description
   Technical documentation and API.
   :::

@@ -1,38 +1,57 @@
 ---
 title: 'Phase 2: Evaluate'
-description: 'Score software objectively'
+description: "Create grids and score software"
 ---
 
 ## Purpose
 
-The purpose of this phase is to evaluate open source software objectively. Using the reference framework defined in Phase 1, you gather information about each software candidate and score it based on consistent, documented criteria.
+This phase consists of creating evaluation grids and scoring software. Each software type is associated with a grid that defines the criteria on which software will be evaluated.
 
-The result is an **evaluation card** for each software version: a complete record of scores, justifications, and evidence that forms the basis for comparison.
+In this phase, you:
 
-## Key Concept
+- **Create the evaluation grid**: the template of criteria for a software type
+- **Evaluate software**: score each version according to the grid's criteria
 
-Evaluations use **reference templates** (grids) that describe:
+## Evaluation Grid
 
-- **Maturity criteria**: 4 dimensions mandated by QSOS 2.0 (Heritage, Activity, Governance, Industrialization)
-- **Functional coverage criteria**: Specific to your software type
-- **0-1-2 Scoring**: Each criterion receives a discrete score
+Each software type can have one or more evaluation grids. Each grid defines the criteria on which software will be evaluated.
+
+Grids are versioned and immutable: to modify a grid, you create a new version.
+
+A grid contains:
+
+- **A Maturity section**: present by default and mandatory
+- **Custom sections**: you can add sections and subsections as needed
+
+## Maturity Section
+
+A software's maturity is evaluated across 4 axes:
+
+- **Heritage (Legacy)**: Age, History, Core Team, Popularity
+- **Activity**: Contributing Community, Activity on Bugs, Activity on Functionalities, Activity on Releases
+- **Governance**: Copyright Holders, Roadmap, Project Management, Distribution Mode
+- **Industrialization**: Services, Documentation, Tests
+
+## Custom Sections
+
+Beyond maturity, you can add sections specific to the software type being evaluated.
+
+Example: For a "Web Frameworks" type, you can add sections like Performance, Security, Maintainability.
+
+## Evaluation
+
+Once the grid is created, you can evaluate software of that type.
+
+Each criterion is scored from 0 to 2:
 
 | Score | Meaning |
 |-------|---------|
-| **0** | Absent / Non-compliant / Problematic |
-| **1** | Partially present / Acceptable |
-| **2** | Complete / Robust / Quality |
+| **0** | Absent or non-compliant |
+| **1** | Partially present |
+| **2** | Complete and robust |
 
-**Rule**: Every score **must be justified** with mandatory text.
-
-Each software is evaluated **against the grid's criteria**, and this complete record forms the **evaluation file**: scores, justifications, traceability (authors, dates).
-
----
+Each score should be accompanied by a justification that is strongly recommended.
 
 ## Next Step
 
-Once software is evaluated → **[Phase 3: Qualify](/en/methodology/03-qualify)**
-
-You will define weighting based on your organizational priorities and context.
-
----
+Once software is evaluated, move to **[Phase 3: Qualify](/en/methodology/03-qualify)** to define weighting based on your priorities.

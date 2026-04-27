@@ -71,7 +71,7 @@ Fonctionnalités clés
   ---
   #title
   Comparaison de logiciels
-  
+
   #description
   Comparez efficacement différentes options de logiciels.
   :::
@@ -83,7 +83,7 @@ Fonctionnalités clés
   ---
   #title
   Référence API
-  
+
   #description
   Documentation technique et API.
   :::

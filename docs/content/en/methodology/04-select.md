@@ -1,30 +1,35 @@
 ---
 title: 'Phase 4: Select'
-description: 'Comparing software evaluations using weights'
+description: "Select and compare software"
 ---
 
 ## Purpose
 
-Interactive comparison interface where you apply weights (Phase 3) to evaluations (Phase 2) to generate a **justified and auditable software ranking**.
+This phase consists of selecting software to compare, then applying your requirement presets to obtain a ranking based on your priorities.
 
-## Key Concept
+In this phase, you:
 
-1. **Comparison table** → Criteria, weights and scores for each software
-2. **Load a preset** → Saved weights apply automatically
-3. **Adjust weights** → Scores recalculate in real-time
-4. **Visualize** → Charts (radar, bubble) showing software positioning and ranking
-5. **Save** → Record adjusted weights as new preset or update existing
-6. **Export** → Generate complete PDF with all results
+- **Select software**: choose the software to compare
+- **Compare software**: comparison table with scores and weights
+- **Visualize results**: radar and bubble charts
+- **Adjust weights**: real-time recalculation
 
----
+## Comparison Table
 
-## Next Step
+The comparison table displays software side by side:
 
-Selection finalized → Justification documented and auditable.
-- Build institutional decision history
+- Criteria organized by sections and subsections
+- Scores for each software
+- Weights applied to each element (sections, subsections, and criteria)
+- Final score calculated automatically
 
----
+You can load an existing preset or adjust weights directly. Scores recalculate in real-time.
 
-## Summary
+## Visualization
 
-Phase 4 applies Phase 3 weights to Phase 2 evaluations using the weighted average formula. The result is a ranked list of software, sorted by fit to organizational priorities. The entire process is auditable: weights are explicit, calculations are documented, and presets capture decision rationale.
+Two types of charts are available:
+
+- **Radar**: overview of scores by criterion
+- **Bubble**: positioning of software along two axes of your choice
+
+At the end of this phase, you obtain a ranking of software based on your requirement presets. You can export the comparison to PDF: table and charts included.
