@@ -134,19 +134,25 @@ const { data: softwareType } = await useFetch<SoftwareType>(`/api/software-types
 const { data: evaluationGrids, status, error, refresh } = await useFetch<EvaluationGrid[]>(`/api/software-types/${softwareTypeUid}/grids`);
 const selectedSoftwares = ref<string[]>(route.query.softwares?.toString().split(',') || []);
 const lastGridVersion = computed(() => {
-  if (!evaluationGrids.value) return null;
-  return evaluationGrids.value.reduce((mostRecent, grid) =>
-    new Date(grid.createdAt) > new Date(mostRecent.createdAt) ? grid : mostRecent
-  ).gridVersion;
+  if (!evaluationGrids.value || evaluationGrids.value.length === 0) return null;
+  // Grid list is already sorted by createdAt (newest first), so just take the first one
+  return evaluationGrids.value[0].gridVersion;
 });
 
 const softwareTypeName = computed(() => grid.value ? grid.value.softwareType.name : softwareType)
 
-const selectedGridVersion = ref(lastGridVersion.value);
+const selectedGridVersion = ref(route.query.gridVersion?.toString() || lastGridVersion.value);
 const grid = computed(() => evaluationGrids.value?.find(g => g.gridVersion === selectedGridVersion.value));
 const selectedVersions = ref({} as any);
 const versionsKey = computed(() => JSON.stringify(selectedVersions.value));
 const availableVersions = ref({} as any);
+
+// Update selectedGridVersion when evaluationGrids is loaded
+watch(evaluationGrids, () => {
+  if (!selectedGridVersion.value && lastGridVersion.value) {
+    selectedGridVersion.value = lastGridVersion.value;
+  }
+});
 
 const requirementPresets = ref<RequirementPreset[]>([]);
 const selectedPresetUid = ref<string>('');
@@ -196,15 +202,22 @@ function initWeights(grid: EvaluationGrid) {
 }
 
 watch([user, selectedGridVersion], async () => {
+  // Only load presets if selectedGridVersion is set
+  if (!selectedGridVersion.value) return;
+  
   await loadPresets();
-  if (!selectedPresetUid.value) {
-    if (requirementPresets.value.length > 0) {
-      selectedPresetUid.value = requirementPresets.value[0]!.presetUid;
-    } else {
-      selectedPresetUid.value = 'default';
-    }
+  // Always set preset when grid version changes - select the most recent preset or default
+  if (requirementPresets.value.length > 0) {
+    selectedPresetUid.value = requirementPresets.value[0]!.presetUid;
+  } else {
+    selectedPresetUid.value = 'default';
   }
 }, { immediate: true });
+
+// Force reload presets when route changes (e.g., after creating a preset)
+watch(() => route.query, async () => {
+  await loadPresets();
+}, { deep: true });
 
 watch(grid, newGrid => {
   if (newGrid) weights.value = initWeights(newGrid);
@@ -219,18 +232,36 @@ watch(selectedPresetUid, (newPresetUid) => {
   if (preset) loadPresetWeights(preset);
 });
 
-onMounted(() => {
+onMounted(async () => {
   const presetFromQuery = route.query.preset?.toString();
-  if (presetFromQuery && presetFromQuery !== selectedPresetUid.value) {
-    selectedPresetUid.value = presetFromQuery;
+  const gridVersionFromQuery = route.query.gridVersion?.toString();
+  
+  // If gridVersion is in query but not set yet, set it
+  if (gridVersionFromQuery && gridVersionFromQuery !== selectedGridVersion.value) {
+    selectedGridVersion.value = gridVersionFromQuery;
+  }
+  
+  // Force reload presets on mount to catch newly created presets
+  await loadPresets();
+  
+  // Wait a bit for the watcher to load presets, then try to set preset from query
+  if (presetFromQuery) {
+    // Give the watcher a chance to load presets
+    await new Promise(resolve => setTimeout(resolve, 50));
+    if (presetFromQuery !== selectedPresetUid.value) {
+      selectedPresetUid.value = presetFromQuery;
+    }
   }
 });
 
 async function loadPresets() {
   const userUid = getEmailUser(user.value);
   if (!userUid) return;
-  const presets = await $fetch<RequirementPreset[]>(`/api/users/${userUid}/requirements-presets?softwareTypeUid=${softwareTypeUid}&gridVersion=${selectedGridVersion.value}`);
-  requirementPresets.value = presets.sort((a, b) => {
+  // Load all presets for this software type, regardless of grid version
+  const allPresets = await $fetch<RequirementPreset[]>(`/api/users/${userUid}/requirements-presets?softwareTypeUid=${softwareTypeUid}`);
+  // Filter by current grid version
+  const filteredPresets = allPresets.filter(p => p.gridVersion === selectedGridVersion.value);
+  requirementPresets.value = filteredPresets.sort((a, b) => {
     const dateA = new Date(a.updatedAt || a.createdAt || 0).getTime();
     const dateB = new Date(b.updatedAt || b.createdAt || 0).getTime();
     return dateB - dateA;
