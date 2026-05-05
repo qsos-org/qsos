@@ -1,9 +1,16 @@
 <template>
     <div class="preset-view">
-        <nav>
-            <NuxtLink :to="`/users/${userUid}/requirements-presets`" class="button back-btn">
-                <Icon name="uil:arrow-left" /> {{$t('preset_detail.back')}}
-            </NuxtLink>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <NuxtLink :to="`/users/${userUid}/requirements-presets`" class="button back-btn">
+                    <Icon name="uil:arrow-left" /> {{$t('preset_detail.back')}}
+                </NuxtLink>
+            </div>
+            <div class="nav-right" v-if="preset">
+                <NuxtLink :to="`/software-types/${preset.softwareTypeUid}?intent=compare&preset=${presetUid}`" class="button button-primary">
+                    <Icon name="uil:comparison" /> {{ $t('preset_detail.comparison_view') }}
+                </NuxtLink>
+            </div>
         </nav>
 
         <section v-if="preset" class="preset-container">
@@ -19,15 +26,14 @@
                 <li v-if="preset.description"><strong>{{ $t('preset_detail.description') }}</strong> {{ preset.description }}</li>
             </ul>
 
-            <div class="preset-message">
-                <Icon name="uil:info-circle" />
-                {{ $t('preset_detail.modify_hint') }} <NuxtLink
-                    :to="`/software-types/${preset.softwareTypeUid}?intent=compare`">{{ $t('preset_detail.comparison_view') }}</NuxtLink>
+            <div class="actions">
+                <NuxtLink :to="`/users/${userUid}/requirements-presets/${presetUid}/edit`" class="button button-secondary">
+                    <Icon name="uil:edit" /> {{ $t('preset_detail.edit') }}
+                </NuxtLink>
+                <button @click="deletePreset" class="button button-danger">
+                    <Icon name="uil:trash" /> {{ $t('preset_detail.delete') }}
+                </button>
             </div>
-
-            <button @click="deletePreset" class="button button-danger">
-                <Icon name="uil:trash" /> {{ $t('preset_detail.delete') }}
-            </button>
         </section>
 
         <div v-else class="not-found">
@@ -85,8 +91,26 @@ function formatDate(dateStr: string) {
     margin: 0 auto;
 }
 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-right .button-primary {
+    font-weight: 600;
+}
+
 .back-btn {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .preset-container {
@@ -118,37 +142,53 @@ function formatDate(dateStr: string) {
     font-size: 1rem;
 }
 
-.preset-message {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-left: 4px solid var(--primary-color);
-    background-color: var(--background-color-light);
-    font-size: 0.95rem;
-    display: flex;
+.button {
+    background-color: var(--background-color-button);
+    color: var(--foreground-color);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
 }
 
-.preset-message a {
-    font-weight: 500;
-    text-decoration: underline;
+.button:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-danger {
     background-color: var(--danger-color);
     color: white;
     border: none;
-    padding: 0.5em 1em;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
+    font-weight: 600;
 }
 
 .button-danger:hover {
-    background-color: var(--danger-color-hover);
+    background-color: #a0313b;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.button-secondary {
+    background-color: var(--background-color-alt);
+    color: var(--foreground-color);
+    border: 1px solid var(--border-color-light);
+    font-weight: 500;
+}
+
+.button-secondary:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .not-found {
