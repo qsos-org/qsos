@@ -13,7 +13,7 @@ In this phase, you create **requirement presets**: sets of weights for grid sect
 
 A requirement preset assigns a weight to each element of an evaluation grid. This weight determines the element's influence on the final score.
 
-You can create multiple presets for different usage contexts.
+You can create multiple presets for the same grid according to your usage contexts.
 
 ## Weighting
 

@@ -22,16 +22,16 @@ QSOS fournit une méthode simple et transparente pour évaluer et comparer des p
 QSOS opère à travers quatre phases distinctes, chacune s'appuyant sur la précédente :
 
 ### Phase 1 : Définir
-Établissez le périmètre et le contexte de votre évaluation. Identifiez les catégories de logiciels, dressez la liste des candidats avec versions spécifiques, et définissez les paramètres d'évaluation.
+Établissez le périmètre de votre évaluation en créant les types de logiciels (catégories fonctionnelles). Pour chaque type, ajoutez les logiciels à évaluer avec leurs versions spécifiques et leurs licences SPDX correspondantes.
 
 ### Phase 2 : Évaluer
-Notez chaque candidat selon une grille d'évaluation structurée. Chaque critère reçoit une note (0 = insuffisant, 2 = complet) avec justification documentée et preuves.
+Créez une grille d'évaluation pour chaque type de logiciel en définissant les critères, puis évaluez chaque logiciel selon cette grille. Chaque critère reçoit une note (0 = absent, 1 = partiel, 2 = complet) avec justification.
 
 ### Phase 3 : Qualifier
-Appliquez une pondération basée sur le contexte organisationnel. Les organisations prioritisent différemment—une startup valorise l'itération rapide et la maintenance active, tandis qu'une entreprise met l'accent sur la stabilité et la gouvernance.
+Créez des préréglages d'exigences en définissant les poids des sections, sous-sections et critères d'une grille. Ces poids seront utilisés pour pondérer les évaluations lors de la comparaison.
 
 ### Phase 4 : Sélectionner
-Comparez les résultats et prenez la décision de sélection. Visualisez les différences, validez les conclusions et générez des rapports documentés pour l'approbation des parties prenantes.
+Comparez les résultats en sélectionnant les logiciels et en appliquant vos préréglages d'exigences. Visualisez les différences avec des graphiques et exportez les résultats en PDF.
 
 ---
 

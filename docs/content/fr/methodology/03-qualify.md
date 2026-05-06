@@ -11,9 +11,9 @@ Dans cette phase, vous créez des **préréglages d'exigences** : ensembles de p
 
 ## Préréglages d'exigences
 
-Un préréglage d'exigences attribue un poids à chaque élément de la grille d'évaluation. Ce poids détermine l'influence de l'élément dans le score final.
+Un préréglage d'exigences attribue un poids à chaque élément d'une grille d'évaluation. Ce poids détermine l'influence de l'élément dans le score final.
 
-Vous pouvez créer plusieurs préréglages selon vos contextes d'utilisation.
+Vous pouvez créer plusieurs préréglages pour une même grille selon vos contextes d'utilisation.
 
 ## Pondération
 

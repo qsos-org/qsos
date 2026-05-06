@@ -5,11 +5,13 @@ description: "Sélectionner et comparer les logiciels"
 
 ## Objectif
 
-Cette phase consiste à sélectionner les logiciels à comparer, puis à appliquer vos préréglages d'exigences pour obtenir un classement basé sur vos priorités.
+Cette phase consiste à sélectionner les logiciels à comparer et visualiser les résultats en appliquant vos préréglages d'exigences.
 
 Dans cette phase, vous :
 
+- **Sélectionnez la grille d'évaluation** : choisissez la version de la grille
 - **Sélectionnez les logiciels** : choix des logiciels à comparer
+- **Sélectionnez les versions** : choisissez la version de chaque logiciel
 - **Comparez les logiciels** : tableau comparatif avec scores et poids
 - **Visualisez les résultats** : graphiques radar et bulles
 - **Ajustez les poids** : recalcul en temps réel
@@ -32,4 +34,4 @@ Deux types de graphiques sont disponibles :
 - **Radar** : vue d'ensemble des scores par critère
 - **Bulles** : positionnement des logiciels selon deux axes de votre choix
 
-À la fin de cette phase, vous obtenez un classement de logiciels basé sur vos préréglages d'exigences. Vous pouvez exporter la comparaison en PDF : tableau et graphiques inclus.
+À la fin de cette phase, vous pouvez visualiser la comparaison des logiciels et exporter les résultats en PDF : tableau et graphiques inclus.

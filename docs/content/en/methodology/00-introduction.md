@@ -22,16 +22,16 @@ QSOS provides a simple, transparent method to evaluate and compare open source p
 QSOS works in four simple phases:
 
 ### Phase 1: Define
-List the software categories and candidates you want to evaluate.
+Establish the scope of your evaluation by creating software types (functional categories). For each type, add the software you want to evaluate with their specific versions and corresponding SPDX licenses.
 
 ### Phase 2: Evaluate
-Score each software against a structured grid. Each criterion gets a score (0 = insufficient, 2 = comprehensive) with justification and evidence.
+Create an evaluation grid for each software type by defining the criteria, then evaluate each software against this grid. Each criterion receives a score (0 = absent, 1 = partial, 2 = comprehensive) with justification.
 
 ### Phase 3: Qualify
-Weight the criteria based on your context. A startup values active maintenance, an enterprise values stability.
+Create requirement presets by defining the weights of sections, subsections and criteria in a grid. These weights will be used to weight evaluations during comparison.
 
 ### Phase 4: Select
-Compare results, visualize differences, and make your decision with full traceability.
+Compare results by selecting software and applying your requirement presets. Visualize differences with charts and export results to PDF.
 
 ---
 

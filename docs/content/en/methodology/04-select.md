@@ -5,12 +5,14 @@ description: "Select and compare software"
 
 ## Purpose
 
-This phase consists of selecting software to compare, then applying your requirement presets to obtain a ranking based on your priorities.
+This phase consists of selecting software to compare and visualizing results by applying your requirement presets.
 
 In this phase, you:
 
+- **Select evaluation grid version**: choose which grid version to use
 - **Select software**: choose the software to compare
-- **Compare software**: comparison table with scores and weights
+- **Select versions**: choose the version for each software
+- **Compare software**: comparative table with scores and weights
 - **Visualize results**: radar and bubble charts
 - **Adjust weights**: real-time recalculation
 
@@ -32,4 +34,4 @@ Two types of charts are available:
 - **Radar**: overview of scores by criterion
 - **Bubble**: positioning of software along two axes of your choice
 
-At the end of this phase, you obtain a ranking of software based on your requirement presets. You can export the comparison to PDF: table and charts included.
+At the end of this phase, you can visualize the comparison of software and export the results to PDF: table and charts included.

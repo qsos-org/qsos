@@ -14,9 +14,7 @@ Dans cette phase, vous :
 
 ## Grille d'évaluation
 
-Chaque type de logiciel peut avoir une ou plusieurs grilles d'évaluation. Chaque grille définit les critères sur lesquels les logiciels seront évalués.
-
-Les grilles sont versionnées et immuables : pour modifier une grille, vous créez une nouvelle version.
+Chaque type de logiciel a une grille d'évaluation qui définit les critères. Les grilles sont versionnées : pour modifier une grille, vous créez une nouvelle version.
 
 Une grille contient :
 

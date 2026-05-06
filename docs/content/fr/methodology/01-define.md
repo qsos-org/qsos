@@ -5,14 +5,13 @@ description: "Établir le cadre d'évaluation"
 
 ## Objectif
 
-Pour évaluer efficacement, il faut d'abord savoir quoi évaluer. Cette phase pose les fondations du processus : vous organisez vos logiciels par catégories, leur associez une licence et définissez les versions concernées.
+Pour évaluer efficacement, il faut d'abord définir ce qu'on évalue. Vous organisez vos logiciels par catégories (types) et définissez les versions à évaluer.
 
-Ce cadre assure la cohérence : tous les logiciels d'une même catégorie seront évalués selon les mêmes critères.
+Dans cette phase, vous créez :
 
-Dans cette phase, vous définissez :
-
-- **Types de logiciels** : classification des logiciels par domaine fonctionnel
-- **Logiciels** : les logiciels à évaluer, avec leurs licences et versions
+- **Types de logiciels** : catégories fonctionnelles (frameworks web, bases de données, etc.)
+- **Logiciels** : les logiciels à évaluer avec leur licence SPDX
+- **Versions** : les versions spécifiques de chaque logiciel
 
 ## Types de logiciels
 
@@ -30,12 +29,10 @@ Exemples :
 
 Au sein de chaque type, vous ajoutez les logiciels concernés.
 
-Exemple : dans le type "Frameworks Web", vous pouvez ajouter Vue.js, React, Angular.
-
 Chaque logiciel est associé à :
 
-- **Une ou plusieurs licences** : provenant de la base SPDX, le standard international qui référence les licences libres et open source. Les licences peuvent être combinées avec les opérateurs `AND`, `OR`, `WITH`.
-- **Une ou plusieurs versions** : les versions que vous souhaitez évaluer. Chaque version est évaluée séparément, ce qui permet de suivre l'évolution du logiciel dans le temps.
+- **Une licence SPDX** : le standard international qui référence les licences libres et open source
+- **Une ou plusieurs versions** : les versions que vous souhaitez évaluer
 
 ## Prochaine étape
 

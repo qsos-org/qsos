@@ -14,9 +14,7 @@ In this phase, you:
 
 ## Evaluation Grid
 
-Each software type can have one or more evaluation grids. Each grid defines the criteria on which software will be evaluated.
-
-Grids are versioned and immutable: to modify a grid, you create a new version.
+Each software type has an evaluation grid that defines the criteria. Grids are versioned: to modify a grid, you create a new version.
 
 A grid contains:
 
