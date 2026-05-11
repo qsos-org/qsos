@@ -130,7 +130,7 @@ watch(selectedGridVersion, async (version: string) => {
     weights.value = {};
     if (selectedSoftwareTypeUid.value && version) {
         try {
-            grid.value = await $fetch(`/api/software-types/${selectedSoftwareTypeUid.value}/grids/${version}`);
+            grid.value = await $fetch<EvaluationGrid>(`/api/software-types/${selectedSoftwareTypeUid.value}/grids/${version}`);
             if (grid.value) {
                 weights.value = initWeights(grid.value);
             }

@@ -94,7 +94,7 @@ const initialWeights = ref({});
 watch(preset, async (p: any) => {
     if (!p) return;
     try {
-        grid.value = await $fetch(`/api/software-types/${p.softwareTypeUid}/grids/${p.gridVersion}`);
+        grid.value = await $fetch<EvaluationGrid>(`/api/software-types/${p.softwareTypeUid}/grids/${p.gridVersion}`);
         weights.value = JSON.parse(JSON.stringify(p.criteriaWeights || {}));
         initialWeights.value = JSON.parse(JSON.stringify(p.criteriaWeights || {}));
         label.value = p.label;

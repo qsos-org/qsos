@@ -31,7 +31,7 @@ export type EvaluationSection = {
 };
 
 export type MaturitySection = EvaluationSection & {
-	name: "Maturity"
+	name: 'qsos_maturity_2_0.maturity'
 }
 
 export type EvaluationSectionRated = {

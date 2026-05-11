@@ -136,7 +136,7 @@ const selectedSoftwares = ref<string[]>(route.query.softwares?.toString().split(
 const lastGridVersion = computed(() => {
   if (!evaluationGrids.value || evaluationGrids.value.length === 0) return null;
   // Grid list is already sorted by createdAt (newest first), so just take the first one
-  return evaluationGrids.value[0].gridVersion;
+  return evaluationGrids.value?.[0]?.gridVersion ?? null;
 });
 
 const softwareTypeName = computed(() => grid.value ? grid.value.softwareType.name : softwareType)
