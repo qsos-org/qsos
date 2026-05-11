@@ -51,7 +51,12 @@ onMounted(async () => {
     try {
         const res = await $fetch(`/api/users/${userUid}/requirements-presets?softwareTypeUid=${props.softwareTypeUid}&gridVersion=${props.gridVersion}`);
         presets.value = res
-        if (presets.value.length > 0 && props.modelValue === '') {
+        if (props.modelValue && props.modelValue !== '' && props.modelValue !== 'default') {
+            const existing = presets.value.find((p: RequirementPreset) => p.presetUid === props.modelValue);
+            if (existing?.criteriaWeights) {
+                emit('loadPresetWeights', JSON.parse(JSON.stringify(existing.criteriaWeights)));
+            }
+        } else if (presets.value.length > 0 && props.modelValue === '') {
             const first = presets.value[0]!.presetUid;
             emit('update:modelValue', first);
             emit('loadPresetWeights', JSON.parse(JSON.stringify(presets.value[0]!.criteriaWeights)));

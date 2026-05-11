@@ -6,7 +6,7 @@ export const qsosVersion2_0: QsosVersion = {
     changelog: "Initial release",
     maturitySection: {
         ref: 'qsos_maturity_2_0.maturity',
-        name: 'Maturity',
+        name: 'qsos_maturity_2_0.maturity',
         description: 'qsos_maturity_2_0.maturity_desc',
         sections: [
             {

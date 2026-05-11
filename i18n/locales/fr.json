@@ -477,7 +477,8 @@
         "bubble": "Bulles",
         "enter_preset_name": "Veuillez entrer un nom de préréglage",
         "error_saving_preset": "Erreur lors de l'enregistrement du préréglage",
-        "legacy_maturity_info": "Cette grille d'évaluation utilise l'ancien format QSOS. La 'Section générique' correspond à la section 'Maturité' dans les versions modernes."
+        "legacy_maturity_info": "Cette grille d'évaluation utilise l'ancien format QSOS. La 'Section générique' correspond à la section 'Maturité' dans les versions modernes.",
+        "no_description": "Description non renseignée"
     },
     "requirements_presets": {
         "back": "Retour",
@@ -491,7 +492,8 @@
         "clear_filters": "Effacer les filtres",
         "no_presets_filtered": "Aucun préréglage trouvé pour les filtres sélectionnés.",
         "no_presets": "Aucun préréglage d'exigences trouvé.",
-        "create_hint": "Vous pouvez créer des préréglages lors de la comparaison de logiciels dans la vue de comparaison."
+        "create_hint": "Cliquez sur le bouton ci-dessous pour créer un nouveau préréglage d'exigences.",
+        "create_preset": "Créer un Préréglage"
     },
     "preset_detail": {
         "back": "Retour aux préréglages",
@@ -503,10 +505,44 @@
         "modify_hint": "Pour modifier ce préréglage, allez dans la",
         "comparison_view": "vue de comparaison",
         "delete": "Supprimer",
+        "edit": "Modifier",
         "not_found": "Préréglage introuvable.",
         "delete_confirm": "Êtes-vous sûr de vouloir supprimer le préréglage \"{label}\" ?",
         "error_deleting": "Erreur lors de la suppression du préréglage",
         "error_loading": "Erreur lors du chargement des préréglages"
+    },
+    "preset_create": {
+        "title": "Créer un Préréglage d'Exigences",
+        "back": "Retour aux préréglages",
+        "software_type": "Type de logiciel",
+        "select_software_type": "Sélectionner un type de logiciel",
+        "select_softwares": "Sélectionner les logiciels pour le préréglage",
+        "grid_version": "Version de la grille",
+        "select_grid_version": "Sélectionner une version",
+        "no_grids_available": "Aucune grille disponible pour ce type de logiciel.",
+        "configure_weights": "Configurer les Poids",
+        "preset_name": "Nom du Préréglage",
+        "enter_preset_name": "Entrer le nom du préréglage",
+        "preset_description": "Description (facultatif)",
+        "enter_preset_description": "Entrer la description du préréglage",
+        "save_preset": "Enregistrer le Préréglage",
+        "cancel": "Annuler",
+        "error_saving": "Erreur lors de l'enregistrement du préréglage",
+        "saved_success": "Préréglage créé avec succès !"
+    },
+    "preset_edit": {
+        "title": "Modifier {label}",
+        "back": "Retour au détail du préréglage",
+        "software_type": "Type de logiciel",
+        "grid_version": "Version de la grille",
+        "configure_weights": "Configurer les Poids",
+        "preset_name": "Nom du Préréglage",
+        "preset_description": "Description (facultatif)",
+        "save_changes": "Enregistrer les Modifications",
+        "go_to_comparison": "Aller à la Comparaison",
+        "cancel": "Annuler",
+        "error_saving": "Erreur lors de l'enregistrement du préréglage",
+        "saved_success": "Préréglage mis à jour avec succès !"
     },
     "qsos_maturity_2_0": {
         "maturity": "Maturité",

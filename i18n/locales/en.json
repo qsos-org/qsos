@@ -473,6 +473,7 @@
         "radar": "Radar",
         "bubble": "Bubble",
         "enter_preset_name": "Please enter a preset name",
+        "no_description": "No description provided",
         "error_saving_preset": "Error saving preset",
         "legacy_maturity_info": "This evaluation grid uses the legacy QSOS format. The 'Section générique' corresponds to the 'Maturity' section in modern versions."
     },
@@ -488,7 +489,8 @@
         "clear_filters": "Clear Filters",
         "no_presets_filtered": "No presets found for the selected filters.",
         "no_presets": "No requirement presets found.",
-        "create_hint": "You can create presets when comparing software in the comparison view."
+        "create_hint": "Click the button below to create a new requirement preset.",
+        "create_preset": "Create Preset"
     },
     "preset_detail": {
         "back": "Back to presets",
@@ -500,10 +502,44 @@
         "modify_hint": "To modify this preset, go to the",
         "comparison_view": "comparison view",
         "delete": "Delete",
+        "edit": "Edit",
         "not_found": "Preset not found.",
         "delete_confirm": "Are you sure you want to delete the preset \"{label}\"?",
         "error_deleting": "Error deleting preset",
         "error_loading": "Error loading presets"
+    },
+    "preset_create": {
+        "title": "Create a Requirements Preset",
+        "back": "Back to presets",
+        "software_type": "Software Type",
+        "select_software_type": "Select a software type...",
+        "select_softwares": "Select software for the preset",
+        "grid_version": "Grid Version",
+        "select_grid_version": "Select a grid version...",
+        "no_grids_available": "No grids available for this software type.",
+        "configure_weights": "Configure Weights",
+        "preset_name": "Preset Name",
+        "enter_preset_name": "Enter preset name",
+        "preset_description": "Description (optional)",
+        "enter_preset_description": "Enter preset description",
+        "save_preset": "Save Preset",
+        "cancel": "Cancel",
+        "error_saving": "Error saving preset",
+        "saved_success": "Preset created successfully!"
+    },
+    "preset_edit": {
+        "title": "Edit {label}",
+        "back": "Back to preset detail",
+        "software_type": "Software Type",
+        "grid_version": "Grid Version",
+        "configure_weights": "Configure Weights",
+        "preset_name": "Preset Name",
+        "preset_description": "Description (optional)",
+        "save_changes": "Save Changes",
+        "go_to_comparison": "Go to Comparison",
+        "cancel": "Cancel",
+        "error_saving": "Error saving preset",
+        "saved_success": "Preset updated successfully!"
     },
     "qsos_maturity_2_0": {
         "maturity": "Maturity",

@@ -85,10 +85,10 @@ const canSave = computed(() => {
 
 const dialogTitle = computed(() =>
     props.mode === 'update' && isLabelChanged.value
-        ? 'preset_save.SAVE_AS_NEW_PRESET'
+        ? 'preset_save.save_as_new_preset'
         : props.mode === 'update'
-            ? 'preset_save.UPDATE_PRESET'
-            : 'preset_save.SAVE_NEW_PRESET'
+            ? 'preset_save.update_preset'
+            : 'preset_save.save_new_preset'
 );
 
 const actionLabel = dialogTitle;

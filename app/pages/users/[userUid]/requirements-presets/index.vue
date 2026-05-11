@@ -32,14 +32,22 @@
         </div>
         <LoadingHandler :status="status" :error="error" :refresh="refresh" />
         <div v-if="status === 'success'">
-            <div v-if="!filteredPresets || filteredPresets.length === 0" class="no-presets">
+            <template v-if="!filteredPresets || filteredPresets.length === 0">
                 <p v-if="selectedSoftwareType || selectedGridVersion">{{ $t('requirements_presets.no_presets_filtered') }}</p>
                 <p v-else>{{ $t('requirements_presets.no_presets') }}</p>
                 <p>{{ $t('requirements_presets.create_hint') }}</p>
-            </div>
+                <div class="actions" v-if="isAuthenticated">
+                    <NuxtLink :to="`/users/${userUid}/requirements-presets/new`" class="button">
+                        <Icon name="uil:plus" /> {{ $t('requirements_presets.create_preset') }}
+                    </NuxtLink>
+                </div>
+            </template>
             <div v-else class="card-container">
                 <RequirementPresetCard v-for="preset in filteredPresets" :key="preset.presetUid" :preset="preset"
                     :userUid="userUid" link />
+                <NuxtLink v-if="isAuthenticated" :to="`/users/${userUid}/requirements-presets/new`" class="card action">
+                    <Icon name="uil:plus" /> {{ $t('requirements_presets.create_preset') }}
+                </NuxtLink>
             </div>
         </div>
     </div>
@@ -107,15 +115,14 @@ const clearFilters = () => {
     selectedSoftwareType.value = '';
     selectedGridVersion.value = '';
 };
+
+// Reload presets on mount to catch newly created presets
+onMounted(() => {
+    refresh();
+});
 </script>
 
 <style scoped>
-.no-presets {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-color-secondary, #666);
-}
-
 .filters {
     display: flex;
     gap: 1rem;
@@ -171,5 +178,22 @@ const clearFilters = () => {
     gap: 0.5em;
     font-family: inherit;
     white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.button-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.button-primary:hover {
+    background: var(--primary-color-hover);
 }
 </style>
