@@ -1,5 +1,5 @@
 <template>
-  <tr class="section" :title="section.description">
+  <tr class="section" :title="section.description ? $t(section.description, section.description) : $t('compare.no_description')">
     <td @click="opened = !opened">
       <span class="path">{{ path.length >= 4 ? `${'&nbsp;'.repeat(path.length - 3)}└` : '' }}
         {{ opened ? '📂' : '📁' }}</span>
@@ -18,7 +18,7 @@
   <template v-if="opened">
     <template v-for="(subsection, index) in section.sections" :key="subsection.name">
       <template v-if="isCriteria(subsection)">
-        <tr class="criteria">
+        <tr class="criteria" :title="subsection.description ? $t(subsection.description, subsection.description) : $t('compare.no_description')">
           <td><span class="path">{{ '&nbsp;'.repeat(path.length + 2) + '└&nbsp;&nbsp;' }}</span>{{ $t(subsection.name,
             subsection.name) }}
           </td>

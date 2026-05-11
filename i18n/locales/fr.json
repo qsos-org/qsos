@@ -478,7 +478,7 @@
         "enter_preset_name": "Veuillez entrer un nom de préréglage",
         "error_saving_preset": "Erreur lors de l'enregistrement du préréglage",
         "legacy_maturity_info": "Cette grille d'évaluation utilise l'ancien format QSOS. La 'Section générique' correspond à la section 'Maturité' dans les versions modernes.",
-        "no_description": "Aucune description disponible"
+        "no_description": "Description non renseignée"
     },
     "requirements_presets": {
         "back": "Retour",

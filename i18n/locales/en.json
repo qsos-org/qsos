@@ -473,7 +473,7 @@
         "radar": "Radar",
         "bubble": "Bubble",
         "enter_preset_name": "Please enter a preset name",
-        "no_description": "No description available",
+        "no_description": "No description provided",
         "error_saving_preset": "Error saving preset",
         "legacy_maturity_info": "This evaluation grid uses the legacy QSOS format. The 'Section générique' corresponds to the 'Maturity' section in modern versions."
     },
