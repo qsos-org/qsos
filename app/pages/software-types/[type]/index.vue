@@ -127,7 +127,7 @@ const toggleSoftwareSelection = (software: Software) => {
   else selectedSoftwares.value.push(software);
 };
 
-const selectedPreset = ref<string>('');
+const selectedPreset = ref<string>(route.query.preset?.toString() || '');
 const weights = ref<any>(null);
 function onLoadPresetWeights(pw: any) {
   weights.value = pw;

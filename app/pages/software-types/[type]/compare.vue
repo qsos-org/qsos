@@ -206,8 +206,11 @@ watch([user, selectedGridVersion], async () => {
   if (!selectedGridVersion.value) return;
   
   await loadPresets();
-  // Always set preset when grid version changes - select the most recent preset or default
-  if (requirementPresets.value.length > 0) {
+  // If a preset is specified in the URL, use it; otherwise select the most recent or default
+  const presetFromUrl = route.query.preset?.toString();
+  if (presetFromUrl && requirementPresets.value.some((p: RequirementPreset) => p.presetUid === presetFromUrl)) {
+    selectedPresetUid.value = presetFromUrl;
+  } else if (requirementPresets.value.length > 0) {
     selectedPresetUid.value = requirementPresets.value[0]!.presetUid;
   } else {
     selectedPresetUid.value = 'default';
