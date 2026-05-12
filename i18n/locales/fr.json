@@ -138,7 +138,8 @@
         "description": "Description",
         "icon": "Icône",
         "author_email": "Email de l'auteur :",
-        "submit": "Enregistrer les modifications",
+        "save": "Enregistrer",
+        "save_changes": "Enregistrer les modifications",
         "disabled_not_logged_in": "Veuillez vous connecter pour modifier ce type de logiciel.",
         "disabled_not_owner": "Vous devez être le propriétaire ou un administrateur pour modifier ce type de logiciel."
     },
@@ -153,6 +154,7 @@
         "demo_url": "URL de démo (optionnel)",
         "icon": "Icône",
         "author_email": "Email de l'auteur :",
+        "save": "Enregistrer",
         "save_changes": "Enregistrer les modifications",
         "delete_software": "Supprimer ce logiciel",
         "delete_confirm": "Êtes-vous sûr de vouloir supprimer \"{name}\" ? Cette action ne peut pas être annulée.",
@@ -177,7 +179,7 @@
         "version": "Version",
         "summary": "Résumé",
         "summary_placeholder": "Petit résumé des modifications par rapport à la version précédente",
-        "submit": "Enregistrer les modifications"
+        "submit": "Enregistrer"
     },
     "home": {
         "title": "Qualification et Sélection de Logiciels Open Source",
@@ -217,29 +219,10 @@
     "about": {
         "back": "Retour",
         "back_homepage": "Retour à l'accueil",
-        "title": "Manifeste QSOS",
-        "need_method_subtitle": "À propos de la nécessité d'une méthode",
-        "need_method_paragraph1": "Du point de vue d'une entreprise, choisir d'adopter un logiciel dans le cadre de son système d'information, qu'il soit open source ou fermé, repose sur l'analyse des besoins et contraintes (techniques, fonctionnels et stratégiques) et sur l'adéquation du logiciel avec les exigences.",
-        "need_method_paragraph2": "Cependant, il est nécessaire d'avoir une méthode de qualification et de sélection adaptée aux logiciels libres et open source lors de l'étude de leur adoption.",
-        "need_method_paragraph3": "Il est en effet extrêmement important d'examiner les contraintes et risques spécifiques des logiciels libres et open source. Ce domaine étant vaste et riche, il est également nécessaire d'avoir une méthode de qualification permettant de différencier les nombreux composants potentiellement correspondants, d'un point de vue technique, fonctionnel et stratégique.",
-        "p4_natural_questions": "En plus de ces questions \"naturelles\":",
-        "q1_natural_questions": "Quel logiciel correspond à mes besoins techniques actuels et futurs ?",
-        "q2_natural_questions": "Quel logiciel correspond à mes besoins fonctionnels actuels et futurs ?",
-        "p5_company_questions": "Voici quelques questions que toute entreprise devrait se poser avant de prendre une décision :",
-        "q1_company_questions": "Quelle est la continuité de ce logiciel ? Quelles sont les chances d'un fork ? Comment l'anticiper et le gérer ?",
-        "q2_company_questions": "Quel niveau de stabilité peut-on espérer ? Comment gérer les dysfonctionnements ?",
-        "q3_company_questions": "Quel est le niveau de support requis et disponible pour ce logiciel ?",
-        "q4_company_questions": "Est-il possible d'influencer le développement du logiciel (ajout de nouvelles fonctionnalités) ?",
-        "paragraph6": "Pour répondre sereinement à ces questions et prendre une décision éclairée tout en gérant les risques, il est nécessaire d'avoir une méthode qui permet de :",
-        "qualify_requirement": "qualifier un logiciel en intégrant les spécificités des logiciels libres et open source",
-        "compare_requirement": "Comparer plusieurs logiciels en fonction des besoins et des critères de pondération afin de prendre une décision finale.",
-        "p7_conclusion": "Ces différents points nous ont conduits à concevoir et formaliser la méthode de Qualification et Sélection de logiciels Open Source (QSOS).",
-        "free_method_subtitle": "À propos de la nécessité d'une méthode libre",
-        "free_method_paragraph1": "À notre avis, une telle méthode doit être distribuée à tous sous une licence libre. Seule une telle licence est en effet capable de garantir la promotion du mouvement libre et Open Source, à travers :",
-        "free_method_benefit1": "la possibilité de réutilisation des évaluations par tous ;",
-        "free_method_benefit2": "la qualité et l'objectivité des documents générés, qui peuvent toujours être améliorés grâce à la transparence et à la revue par les pairs.",
-        "paragraph8": "Par conséquent, nous avons décidé de distribuer la méthode QSOS et les documents générés (modèles et fiches d'identité) sous la Licence de Documentation Libre GNU.",
-        "paragraph9": "Les outils développés pour appliquer facilement cette méthode sont distribués sous la Licence Publique Générale GNU."
+        "title": "À propos de QSOS",
+        "tool_description": "QSOS (Qualification et Sélection de logiciels Open Source) est un outil qui permet d'évaluer, qualifier et comparer des logiciels open source à l'aide d'une méthodologie structurée et transparente.",
+        "read_manifesto": "Lire le Manifeste QSOS →",
+        "read_docs": "Lire la documentation complète →"
     },
     "import_legacy": {
         "title": "Importer un fichier XML .qsos legacy",

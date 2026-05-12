@@ -20,8 +20,8 @@
         }}</label>
         <div class="actions">
             <button type="submit" v-if="canEdit">
-                <Icon name="uil:save" :title="$t('software_type_form.submit')" />
-                {{ $t('software_type_form.submit') }}
+                <Icon name="uil:save" :title="isExisting ? $t('software_type_form.save_changes') : $t('software_type_form.save')" />
+                {{ isExisting ? $t('software_type_form.save_changes') : $t('software_type_form.save') }}
             </button>
         </div>
     </form>

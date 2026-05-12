@@ -47,7 +47,7 @@
 
         <div class="form-actions" v-if="!hideSubmit">
             <button type="submit" v-if="canEdit">
-                <Icon name="uil:save" /> {{$t('software_form.save_changes')}}
+                <Icon name="uil:save" /> {{ route.params.softwareUid ? $t('software_form.save_changes') : $t('software_form.save') }}
             </button>
             <button class="button danger" @click.stop.prevent="deleteSoftware(software)"
                 v-if="route.params.softwareUid && canEdit">
@@ -90,7 +90,7 @@ const software = defineModel<Software>({
 });
 
 const isAdmin = computed(() => (session.value?.user?.roles || []).includes('admin'));
-const isExisting = computed(() => !!software.value?.uid);
+const isExisting = computed(() => !!route.params.softwareUid);
 const isOwner = computed(() => {
     const me = (user.value?.email || '').toLowerCase();
     const owner = (software.value?.creatorEmail || (software.value as any)?.author?.email || '').toLowerCase();
