@@ -409,7 +409,22 @@
         "add_subsection": "Ajouter une sous-section",
         "add_criteria": "Ajouter un critère",
         "create_new_grid": "Créer une nouvelle grille d'évaluation",
-        "submit_changes": "Enregistrer les modifications"
+        "submit_changes": "Enregistrer les modifications",
+        "maturity_update_title": "Une nouvelle version des critères de Maturité QSOS est disponible, souhaitez-vous mettre à jour ?",
+        "maturity_no": "Non, conserver la version obsolète. Les évaluations précédentes resteront valides.",
+        "maturity_yes": "Oui, mettre à jour vers la dernière version. Cela implique la publication d'une nouvelle version majeure pour cette grille.",
+        "push_new_version": "Souhaitez-vous publier une nouvelle version ?",
+        "patch_label": "Corriger la version actuelle",
+        "patch_desc": "uniquement corriger des fautes, ajouter des informations manquantes, etc.",
+        "minor_label": "Mise à jour mineure",
+        "minor_desc": "uniquement des changements rétrocompatibles, les évaluations précédentes restent valides.",
+        "major_label": "Mise à jour majeure",
+        "major_desc": "des critères ou sections ont été ajoutés, supprimés ou significativement modifiés, les évaluations précédentes peuvent ne plus être valides.",
+        "changelog": "Journal des modifications",
+        "changelog_placeholder": "Décrivez les modifications apportées dans cette version",
+        "publish_major": "Publier la nouvelle version majeure {version}",
+        "publish_minor": "Publier la nouvelle version mineure {version}",
+        "save_version": "Enregistrer les modifications de la version {version}"
     },
     "software_version_edit": {
         "edit_title": "Modifier la version {version}",

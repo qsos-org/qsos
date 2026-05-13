@@ -406,7 +406,22 @@
         "add_subsection": "Add subsection",
         "add_criteria": "Add criteria",
         "create_new_grid": "Create new Evaluation Grid",
-        "submit_changes": "Submit changes"
+        "submit_changes": "Submit changes",
+        "maturity_update_title": "A new version of QSOS Maturity criteria is available, do you want to update?",
+        "maturity_no": "No, keep the outdated version. The previous evaluations will remain valid.",
+        "maturity_yes": "Yes, update to the latest version. This implies publishing a new major version for this grid.",
+        "push_new_version": "Do you want to push a new version?",
+        "patch_label": "Patch current version",
+        "patch_desc": "only fix typos, add missing information, etc.",
+        "minor_label": "Minor version update",
+        "minor_desc": "only backwards-compatible changes, the previous evaluations remain valid.",
+        "major_label": "Major version update",
+        "major_desc": "criterias or sections have been added, removed or significantly changed, the previous evaluations may not be valid anymore.",
+        "changelog": "Changelog",
+        "changelog_placeholder": "Describe the changes made in this version",
+        "publish_major": "Publish new major version {version}",
+        "publish_minor": "Publish new minor version {version}",
+        "save_version": "Save changes to version {version}"
     },
     "software_version_edit": {
         "edit_title": "Edit version {version}",
