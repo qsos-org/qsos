@@ -433,7 +433,7 @@
     "evaluation_new": {
         "back": "Retour",
         "back_to_type": "Retour à {type}",
-        "title": "Nouvelle évaluation pour {name} version {version} {gridVersion}",
+        "title": "Nouvelle évaluation pour {name} version {version} - Grille d'évaluation v{gridVersion}",
         "loading": "Chargement de la dernière grille d'évaluation...",
         "no_versions": "Aucune version n'a été déclarée pour ce logiciel.",
         "declare_version": "Déclarer une nouvelle version",

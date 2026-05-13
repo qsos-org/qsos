@@ -430,7 +430,7 @@
     "evaluation_new": {
         "back": "Back",
         "back_to_type": "Back to {type}",
-        "title": "New Evaluation for {name} version {version} {gridVersion}",
+        "title": "New Evaluation for {name} version {version} - Evaluation grid v{gridVersion}",
         "loading": "Loading latest evaluation grid...",
         "no_versions": "No versions have been declared for this software.",
         "declare_version": "Declare a new version",
