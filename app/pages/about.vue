@@ -8,12 +8,12 @@
     <h1>{{ $t('about.title') }}</h1>
     <p>{{ $t('about.tool_description') }}</p>
     <p>
-      <a href="/docs/en/methodology/qsos-manifesto" target="_blank">
+      <a :href="docsUrl + '/en/methodology/qsos-manifesto'" target="_blank">
         {{ $t('about.read_manifesto') }}
       </a>
     </p>
     <p>
-      <a href="/docs/en/methodology/introduction" target="_blank">
+      <a :href="docsUrl + '/en/methodology/introduction'" target="_blank">
         {{ $t('about.read_docs') }}
       </a>
     </p>
@@ -21,6 +21,11 @@
 </template>
 <script>
 export default {
-  name: 'AboutPage'
+  name: 'AboutPage',
+  data() {
+    return {
+      docsUrl: 'http://localhost:3000/docs'
+    }
+  }
 }
 </script>
