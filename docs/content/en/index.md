@@ -16,7 +16,7 @@ Welcome to the QSOS documentation
   ---
   color: neutral
   size: xl
-  to: /en/methodology/00-introduction
+  to: /en/methodology/introduction
   trailing-icon: i-lucide-arrow-right
   ---
     Get Started
@@ -71,7 +71,7 @@ Key Features
   ---
   #title
   Software Comparison
-  
+
   #description
   Compare different software options effectively.
   :::
@@ -83,7 +83,7 @@ Key Features
   ---
   #title
   API Reference
-  
+
   #description
   Technical documentation and API.
   :::

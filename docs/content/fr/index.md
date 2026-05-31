@@ -16,7 +16,7 @@ Bienvenue dans la documentation QSOS
   ---
   color: neutral
   size: xl
-  to: /fr/methodology/00-introduction
+  to: /fr/methodology/introduction
   trailing-icon: i-lucide-arrow-right
   ---
     Commencer
@@ -71,7 +71,7 @@ Fonctionnalités clés
   ---
   #title
   Comparaison de logiciels
-  
+
   #description
   Comparez efficacement différentes options de logiciels.
   :::
@@ -83,7 +83,7 @@ Fonctionnalités clés
   ---
   #title
   Référence API
-  
+
   #description
   Documentation technique et API.
   :::

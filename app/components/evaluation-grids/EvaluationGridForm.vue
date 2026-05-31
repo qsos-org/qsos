@@ -127,44 +127,41 @@
 
     <section class="version-change" v-if="initialVersion && showVersionChange">
       <div class="info">
-        <h2>A new version of QSOS Maturity criteria is available, do you want to update ?</h2>
+        <h2>{{ $t('grid_form.maturity_update_title') }}</h2>
         <label>
           <input type="radio" name="qsosupdate" value="no" checked v-model="shouldUpdateMaturity" :disabled="!canEdit">
-          No,
-          keep the outdated version. The previous evaluations will remain valid.
+          {{ $t('grid_form.maturity_no') }}
         </label>
         <label>
           <input type="radio" name="qsosupdate" value="yes" v-model="shouldUpdateMaturity" :disabled="!canEdit">
-          Yes, update to the latest version. This implies publishing a new major version for this grid.
+          {{ $t('grid_form.maturity_yes') }}
         </label>
       </div>
 
-      <h2>Do you want to push a new version ?</h2>
+      <h2>{{ $t('grid_form.push_new_version') }}</h2>
       <label><input type="radio" name="versionupdate" value="patch" checked v-model="versionUpdate"
           :disabled="shouldUpdateMaturity === 'yes' || !canEdit">
-        <strong>Patch current version</strong>: only fix typos, add missing information, etc.</label>
+        <strong>{{ $t('grid_form.patch_label') }}</strong>: {{ $t('grid_form.patch_desc') }}</label>
       <label>
         <input type="radio" name="versionupdate" value="minor" v-model="versionUpdate"
           :disabled="shouldUpdateMaturity === 'yes' || !canEdit">
-        <strong>Minor version update</strong>: only backwards-compatible changes, the previous evaluations
-        remain valid.</label>
+        <strong>{{ $t('grid_form.minor_label') }}</strong>: {{ $t('grid_form.minor_desc') }}</label>
       <label>
         <input type="radio" name="versionupdate" value="major" v-model="versionUpdate" :disabled="!canEdit">
-        <strong>Major version update</strong>: criterias or sections have been added, removed or significantly
-        changed, the previous evaluations may not be valid anymore.
+        <strong>{{ $t('grid_form.major_label') }}</strong>: {{ $t('grid_form.major_desc') }}
       </label>
 
       <div class="changeLog" v-if="versionUpdate !== 'patch'">
-        <h2>Changelog</h2>
-        <textarea v-model="grid.changeLog" placeholder="Describe the changes made in this version"
+        <h2>{{ $t('grid_form.changelog') }}</h2>
+        <textarea v-model="grid.changeLog" :placeholder="$t('grid_form.changelog_placeholder')"
           :disabled="!canEdit"></textarea>
       </div>
 
       <div class="actions">
         <button type="submit">
-          <template v-if="versionUpdate === 'major'">Publish new major version {{ newVersion }}</template>
-          <template v-else-if="versionUpdate === 'minor'">Publish new minor version {{ newVersion }}</template>
-          <template v-else>Save changes to version {{ newVersion }}</template>
+          <template v-if="versionUpdate === 'major'">{{ $t('grid_form.publish_major', { version: newVersion }) }}</template>
+          <template v-else-if="versionUpdate === 'minor'">{{ $t('grid_form.publish_minor', { version: newVersion }) }}</template>
+          <template v-else>{{ $t('grid_form.save_version', { version: newVersion }) }}</template>
         </button>
       </div>
     </section>

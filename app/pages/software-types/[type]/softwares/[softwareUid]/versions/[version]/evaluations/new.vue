@@ -12,9 +12,7 @@
                 {{ $t('evaluation_new.login_required') }}
             </div>
             <div v-if="isAuthenticated">
-                <h1 class="ribbon-evaluate">New Evaluation for {{ software?.name }} version {{ softwareVersion }}{{
-                    gridVersion ? `- Evaluation grid
-                    v${gridVersion}` : '' }} </h1>
+                <h1 class="ribbon-evaluate">{{ $t('evaluation_new.title', { name: software?.name, version: softwareVersion, gridVersion: gridVersion || '' }) }}</h1>
                 <LoadingHandler :status="status" :error="error" :refresh="refresh" />
                 <p v-if="loading">{{ $t('evaluation_new.loading') }}</p>
                 <EvaluationForm v-if="status === 'success' && evaluation?.grid && evaluation?.softwareVersion"
