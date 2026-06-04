@@ -43,12 +43,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       github: {
-        clientId: process.env.GITHUB_CLIENT_ID,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET
+        clientId: process.env.NUXT_OAUTH_GITHUB_CLIENT_ID,
+        clientSecret: process.env.NUXT_OAUTH_GITHUB_CLIENT_SECRET
       },
       gitlab: {
-        clientId: process.env.GITLAB_CLIENT_ID,
-        clientSecret: process.env.GITLAB_CLIENT_SECRET
+        clientId: process.env.NUXT_OAUTH_GITLAB_CLIENT_ID,
+        clientSecret: process.env.NUXT_OAUTH_GITLAB_CLIENT_SECRET
       },
       docsServerPort: process.env.DOCS_SERVER_PORT || '3001'
     },
