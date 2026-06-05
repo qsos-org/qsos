@@ -95,7 +95,7 @@ function weightedAverageForSection(
   return parseFloat((total / totalWeight).toFixed(2));
 }
 
-const sectionLabels = computed(() => props.grid.sections.map(section => section.name));
+const sectionLabels = computed(() => props.grid.sections.map(section => $t(section.name)));
 
 const chartData: ComputedRef<ChartData<"radar">> = computed(() => ({
   labels: sectionLabels.value,

@@ -93,7 +93,7 @@ function weightedAverageForSection(
 }
 
 function weightedAverageExcludingMaturity(evaluations: EvaluationListItem[], weights: any) {
-  const maturityNames = ['Maturity', 'Maturité', 'Madurez', 'Section générique'];
+  const maturityNames = ['Maturity', 'Maturité', 'Madurez', 'Section générique', 'qsos_maturity_2_0.maturity']
   const sectionIndices = props.grid.sections.map((_, idx) => idx).filter(idx =>
     !maturityNames.includes(props.grid.sections[idx]!.name)
   );
@@ -104,7 +104,7 @@ function weightedAverageExcludingMaturity(evaluations: EvaluationListItem[], wei
 const chartData = computed(() => ({
   datasets: Object.entries(props.softwares).map(([softwareUid, { software, evaluations }], idx) => {
     const functionalCover = weightedAverageExcludingMaturity(evaluations, props.weights);
-    const maturityNames = ['Maturity', 'Maturité', 'Madurez', 'Section générique'];
+    const maturityNames = ['Maturity', 'Maturité', 'Madurez', 'Section générique', 'qsos_maturity_2_0.maturity']
     const maturityIdx = props.grid.sections.findIndex(section => maturityNames.includes(section.name));
     const maturity = maturityIdx !== -1 ? weightedAverageForSection(evaluations, maturityIdx, props.weights) : null;
 
